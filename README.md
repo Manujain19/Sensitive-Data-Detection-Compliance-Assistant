@@ -222,27 +222,18 @@ Suggested 2-5 minute demo flow:
 5. Ask: "What compliance risks are identified?"
 6. Show the redacted preview and download option.
 
-## Deployment Link
-
-Add your working deployment URL here after publishing:
+## Working Prototype Deployment Link
 
 ```text
-Deployment: https://your-deployment-url.example
+Deployment: https://sensitive-data-detection-compliance-assistant-2vuhkzrcmtbrcbtv.streamlit.app/
 ```
 
-Recommended deployment options:
-
-- Streamlit Community Cloud
-- Render
-- Azure App Service
-- Hugging Face Spaces
+The prototype is deployed on Streamlit Community Cloud. Runtime secrets such as Gemini, Groq, HuggingFace, LangSmith, JWT, and Google OAuth credentials are configured through Streamlit app secrets and are not committed to the repository.
 
 ## GitHub Repository Link
 
-Add your repository URL here after pushing:
-
 ```text
-GitHub: https://github.com/your-username/sensitive-data-detection-compliance-assistant
+GitHub: https://github.com/Manujain19/Sensitive-Data-Detection-Compliance-Assistant
 ```
 
 ## Security Notes
