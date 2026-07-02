@@ -458,7 +458,7 @@ def render_google_auth_button(label: str, key: str) -> None:
     auth_url = build_google_auth_url()
     if auth_url:
         st.markdown(
-            f'<a class="google-same-tab" href="{escape(auth_url, quote=True)}" target="_self">{label} with Google</a>',
+            f'<a class="google-same-tab" href="{escape(auth_url, quote=True)}" target="_top" rel="noopener">{label} with Google</a>',
             unsafe_allow_html=True,
         )
         return
