@@ -1,0 +1,9 @@
+.git
+.venv
+__pycache__
+.pytest_cache
+.env
+audit_log.jsonl
+app_data
+.streamlit/secrets.toml
+*.pyc

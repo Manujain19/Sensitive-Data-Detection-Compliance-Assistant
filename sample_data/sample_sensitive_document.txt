@@ -1,0 +1,14 @@
+Confidential - Internal Use Only
+
+Employee ID: EMP-7788
+Name: Priya Sharma
+Email: priya.sharma@example.com
+Phone: +91 9876543210
+Aadhaar: 2345 6789 1234
+PAN: ABCDE1234F
+Bank account number: 123456789012
+IFSC: HDFC0001234
+API_KEY=demo_token_1234567890abcdef
+Password=Secret123
+
+This document contains pricing strategy notes for a potential acquisition.
