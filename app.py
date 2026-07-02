@@ -457,10 +457,7 @@ def google_login_href() -> str:
 def render_google_auth_button(label: str, key: str) -> None:
     auth_url = build_google_auth_url()
     if auth_url:
-        st.markdown(
-            f'<a class="google-same-tab" href="{escape(auth_url, quote=True)}" target="_top" rel="noopener">{label} with Google</a>',
-            unsafe_allow_html=True,
-        )
+        st.link_button(f"{label} with Google", auth_url, use_container_width=True)
         return
     if st.button(f"{label} with Google", key=key, use_container_width=True):
         st.warning("Google login needs GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET, and GOOGLE_REDIRECT_URI in .env.")
