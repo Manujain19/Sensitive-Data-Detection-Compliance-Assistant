@@ -76,11 +76,39 @@ except ImportError:
     pass
 
 
+def load_streamlit_secrets_to_env() -> None:
+    secret_names = [
+        "GROQ_API_KEY",
+        "GEMINI_API_KEY",
+        "GROQ_MODEL",
+        "GEMINI_MODEL",
+        "AI_TEMPERATURE",
+        "JWT_SECRET",
+        "ADMIN_EMAIL",
+        "GOOGLE_CLIENT_ID",
+        "GOOGLE_CLIENT_SECRET",
+        "GOOGLE_REDIRECT_URI",
+        "HUGGINGFACE_API_KEY",
+        "HUGGINGFACE_ZERO_SHOT_MODEL",
+        "SPACY_MODEL",
+        "LANGSMITH_TRACING",
+        "LANGSMITH_API_KEY",
+    ]
+    try:
+        for name in secret_names:
+            if not os.getenv(name) and name in st.secrets:
+                os.environ[name] = str(st.secrets[name])
+    except Exception:
+        pass
+
+
 st.set_page_config(
     page_title="Sensitive Data Detection & Compliance Assistant",
     page_icon="lock",
     layout="wide",
 )
+
+load_streamlit_secrets_to_env()
 
 
 def main() -> None:
