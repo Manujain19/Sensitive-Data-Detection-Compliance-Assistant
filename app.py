@@ -77,6 +77,13 @@ except ImportError:
 
 
 def load_streamlit_secrets_to_env() -> None:
+    possible_secret_files = (
+        Path.home() / ".streamlit" / "secrets.toml",
+        APP_DIR / ".streamlit" / "secrets.toml",
+    )
+    if not any(path.exists() for path in possible_secret_files):
+        return
+
     secret_names = [
         "GROQ_API_KEY",
         "GEMINI_API_KEY",
