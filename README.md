@@ -211,17 +211,6 @@ This is stronger than an LLM-only design because contextual AI/ML detection hand
 - Add configurable compliance frameworks such as DPDP Act, GDPR, PCI DSS, and HIPAA.
 - Add deployment automation for Streamlit Community Cloud, Render, or Azure App Service.
 
-## Demo Video
-
-Suggested 2-5 minute demo flow:
-
-1. Start the app and upload `sample_data/sample_sensitive_document.txt`.
-2. Show the risk score and findings table.
-3. Open the summary tab and explain compliance/security observations.
-4. Ask: "How many email addresses are present?"
-5. Ask: "What compliance risks are identified?"
-6. Show the redacted preview and download option.
-
 ## Working Prototype Deployment Link
 
 ```text
